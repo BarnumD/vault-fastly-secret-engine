@@ -1,6 +1,6 @@
-module github.com/nytimes/vault-fastly-secret-engine
+module github.com/barnumd/vault-fastly-secret-engine
 
-go 1.13
+go 1.14.1
 
 require (
 	github.com/SermoDigital/jose v0.9.2-0.20180104203859-803625baeddc // indirect

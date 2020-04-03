@@ -3,9 +3,9 @@ package fastly
 import (
 	"context"
 
+	"github.com/barnumd/vault-fastly-secret-engine/version"
 	"github.com/hashicorp/vault/logical"
 	"github.com/hashicorp/vault/logical/framework"
-	"github.com/nytimes/vault-fastly-secret-engine/version"
 )
 
 func (b *backend) pathInfo(_ context.Context, req *logical.Request, _ *framework.FieldData) (*logical.Response, error) {

@@ -12,7 +12,7 @@ management tool.
 
     ```text
     $ SHASUM=$(shasum -a 256 vault-fastly-secret-engine | cut -d " " -f1)
-    $ vault write sys/plugins/catalog/vault-fastly-secret-engine sha_256="$SHASUM" command="vault-fastly-secret-engine" 
+    $ vault write sys/plugins/catalog/secret/vault-fastly-secret-engine sha_256="$SHASUM" command="vault-fastly-secret-engine"
     Success! Data written to: sys/plugins/catalog/vault-fastly-secret-engine
     ```
 
@@ -79,7 +79,7 @@ In a second terminal window...
 export VAULT_ADDR='http://0.0.0.0:1234'
 vault login myroot
 SHASUM=$(shasum -a 256 vault-fastly-secret-engine | cut -d " " -f1)
-vault write sys/plugins/catalog/vault-fastly-secret-engine   sha_256="$SHASUM"   command="vault-fastly-secret-engine"
+vault write sys/plugins/catalog/secret/vault-fastly-secret-engine sha_256="$SHASUM" command="vault-fastly-secret-engine"
 vault secrets enable -path="fastly" -plugin-name="vault-fastly-secret-engine" plugin
 vault write fastly/config username="sam" password="test" sharedSecret="123"
 ```

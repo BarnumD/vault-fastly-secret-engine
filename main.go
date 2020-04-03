@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
+	fastly "github.com/barnumd/vault-fastly-secret-engine/plugin"
 	"github.com/hashicorp/vault/helper/pluginutil"
 	"github.com/hashicorp/vault/logical/plugin"
-	fastly "github.com/nytimes/vault-fastly-secret-engine/plugin"
 )
 
 func main() {
